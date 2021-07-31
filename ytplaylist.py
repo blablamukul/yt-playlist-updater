@@ -8,7 +8,7 @@ scopes = 'https://www.googleapis.com/auth/youtube'
 flow = InstalledAppFlow.from_client_secrets_file('client_secret.json',scopes)
 credentials = flow.run_console()
 
-youtube = build('youtube', 'v3', credentials= credentials, developerKey = 'AIzaSyDDiASLcaGi40XATzxatomNN75z-nFnXoQ')
+youtube = build('youtube', 'v3', credentials= credentials, developerKey = '')
 req_playlist = youtube.playlists().list(part = 'snippet,id',mine = True)
 res_playlist = req_playlist.execute()
 
